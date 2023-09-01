@@ -25,7 +25,15 @@ class Counter2 extends Component{
             }
         )
     }
-
+    componentDidMount(){
+        console.log("componentDidMount")
+    }
+    componentDidUpdate(){
+        console.log("componentDidUpdate")
+    }
+    componentWillUnmount(){
+        console.log("componentWillUnmount")
+    }
     render(){
         return(
             <div>
