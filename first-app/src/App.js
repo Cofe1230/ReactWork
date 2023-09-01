@@ -6,6 +6,7 @@ import Food from './Food';
 import Movie from './Movie';
 import Counter2 from './Counter2';
 import MyDevice from './MyDevice';
+import MyDevice1 from './MyDevice1';
 
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
       <h3>MyDevice 컴포넌트</h3>
       <MyDevice mydata = {mydataApp}/>
       <hr/>
+      <h4>MyDevice1 클래스 컴포넌트</h4>
+      <MyDevice1 mydata = {mydataApp.myDeviceData}/>
       <Movie title = "영화1"/>
       <Movie title = "영화2"/>
       <Movie title = "영화3"/>
