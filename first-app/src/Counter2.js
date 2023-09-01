@@ -16,13 +16,22 @@ class Counter2 extends Component{
         //     (st)=>{myAge : st.myAge+1}
         // )
     }
+    minus = ()=>{
+        this.setState(
+            ({myAge})=>{
+                return{
+                    myAge : myAge-1
+                }
+            }
+        )
+    }
 
     render(){
         return(
             <div>
                 <span>나이 {this.state.myAge}</span>
                 <button onClick={this.plus}>증가</button>
-                <button>감소</button>
+                <button onClick={this.minus}>감소</button>
             </div>
         )
 
