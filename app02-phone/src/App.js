@@ -4,6 +4,7 @@ import PhoneForm from './component/PhoneForm';
 import PhoneList from './component/PhoneList';
 import { Component } from 'react';
 class App extends Component {
+  id = 2;
   state ={
     information : [
       {
@@ -18,12 +19,30 @@ class App extends Component {
       }
     ]
   }
+  //추가
+  handleCreate = (data)=>{
+    console.log(data)
+    const {information} = this.state
+    this.setState({
+      information : information.concat({
+        id : this.id++, ...data
+      })
+    })
+  }
+  //삭제
+  handleRemove = (id)=>{
+    const {information} = this.state
+    this.setState({
+      information : information.filter(info=>info.id !==id)
+    })
 
+  }
   render(){
     return (
       <div>
-        <PhoneForm/>
-        <PhoneList data = {this.state.information}/>
+        <PhoneForm onCreate = {this.handleCreate}/>
+        <PhoneList data = {this.state.information}
+        onRemove = {this.handleRemove}/>
       </div>
     );
   }

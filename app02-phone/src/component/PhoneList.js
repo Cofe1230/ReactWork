@@ -4,14 +4,14 @@ import PhoneInfo from "./PhoneInfo";
 
 class PhoneList extends Component{
     render(){
-        const {data} = this.props
+        const {data,onRemove} = this.props
         return(
             <div>
-                [Phone List $$$$$$]<br/>
+                [Phone List]<br/>
                 {
                     data.map((info)=>{
                         return(
-                            <PhoneInfo info={info}/>
+                            <PhoneInfo key={info.id} info={info} onRemove = {onRemove}/>
                         )
                     })
                 }
