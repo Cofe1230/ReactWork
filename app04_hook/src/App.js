@@ -4,6 +4,7 @@ import InputSample from './InputSample';
 import InputTest from './InputTest';
 import InputTestClass from './InputTestClass';
 import Say from './Say';
+import Counter from './Counter';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <InputTestClass/>
       <hr/>
       <Say/>
+      <hr/>
+      <Counter/>
     </div>
   );
 }
