@@ -5,6 +5,7 @@ import InputTest from './InputTest';
 import InputTestClass from './InputTestClass';
 import Say from './Say';
 import Counter from './Counter';
+import Parent from './Parent';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Say/>
       <hr/>
       <Counter/>
+      <hr/>
+      <Parent/>
     </div>
   );
 }
