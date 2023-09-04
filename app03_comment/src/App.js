@@ -39,6 +39,12 @@ class App extends Component {
   //삭제
   handleRemove = id =>{
     console.log("handleRemove" + id)
+    const {todos} = this.state
+    const nextTodos = todos.filter(todo=> todo.id !==id)
+
+    this.setState({
+      todos : nextTodos
+    })
   }
   //토글
   handleToggle = (id)=>{

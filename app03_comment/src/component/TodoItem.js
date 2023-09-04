@@ -6,8 +6,12 @@ class TodoItem extends Component{
         const {id, text, checked, onRemove, onToggle}= this.props;
         return(
             <div className="todo-item">
-                <div className="remove">
-
+                <div className="remove" 
+                onClick={e=>{
+                    e.stopPropagation();
+                    onRemove(id)
+                }
+                }>
                     &times;
                 </div>
                 <div>
