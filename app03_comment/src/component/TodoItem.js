@@ -5,7 +5,11 @@ class TodoItem extends Component{
     render(){
         const {id, text, checked, onRemove, onToggle}= this.props;
         return(
-            <div className="todo-item">
+            <div className="todo-item"
+                onClick={()=>{
+                    onToggle(id)
+                    }
+                }>
                 <div className="remove" 
                 onClick={e=>{
                     e.stopPropagation();

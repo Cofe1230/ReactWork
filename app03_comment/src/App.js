@@ -5,6 +5,7 @@ import CommentList from './CommentList';
 import Form from './component/Form';
 import TodoListTemplate from './component/TodoListTemplate';
 import TodoItemList from './component/TodoItemList';
+import NotificationList from './NotificationList';
 
 
 class App extends Component {
@@ -38,7 +39,7 @@ class App extends Component {
   }
   //삭제
   handleRemove = id =>{
-    console.log("handleRemove" + id)
+    //console.log("handleRemove" + id)
     const {todos} = this.state
     const nextTodos = todos.filter(todo=> todo.id !==id)
 
@@ -48,7 +49,19 @@ class App extends Component {
   }
   //토글
   handleToggle = (id)=>{
-    console.log("handleToggle" + id)
+    //console.log("handleToggle" + id)
+    const {todos} = this.state
+    const index = todos.findIndex(todo=> todo.id === id)
+    const selected = todos[index] //선택된 객체
+
+    const nextTodos = [...todos]
+    nextTodos[index] ={
+      ...selected,
+      checked : !selected.checked
+    }
+    this.setState({
+      todos : nextTodos
+    })
   }
   //입력하고 엔터키
   handleKeyPress = e =>{
@@ -60,7 +73,7 @@ class App extends Component {
     return (
       <div>
        {/* <CommentList/> */}
-        <TodoListTemplate
+        {/* <TodoListTemplate
           form = {
             <Form 
             value={this.state.input} 
@@ -73,7 +86,8 @@ class App extends Component {
           todos = {this.state.todos}
           onRemove = {this.handleRemove}
           onToggle = {this.handleToggle}/>
-        </TodoListTemplate>
+        </TodoListTemplate> */}
+        <NotificationList/>
       </div>
     );
   }
