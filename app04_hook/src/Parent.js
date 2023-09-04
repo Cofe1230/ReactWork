@@ -1,3 +1,4 @@
+import Food1 from "./Food1";
 import Child from "./Child";
 import Food from "./Food";
 
@@ -59,6 +60,18 @@ const Parent=()=>{
                         <Food key={food.id} food={food}/>
                     )
                     
+                })
+            }
+            <hr/>
+            {
+                foodILike.map((food)=>{
+                    return(
+                        <Food1 key={food.id}
+                            id ={food.id}
+                            name = {food.name}
+                            rating = {food.rating}
+                            image = {food.image}/>
+                    )
                 })
             }
         </div>
