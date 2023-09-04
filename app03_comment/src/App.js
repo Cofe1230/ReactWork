@@ -4,7 +4,8 @@ import { Component } from "react";
 import CommentList from './CommentList';
 import Form from './component/Form';
 import TodoListTemplate from './component/TodoListTemplate';
-import TodoItemList from './component/TodoItem';
+import TodoItemList from './component/TodoItemList';
+
 
 class App extends Component {
   id = 4;
@@ -25,11 +26,29 @@ class App extends Component {
   }
   //추가
   handleCreate = ()=>{
-
+    const {input,todos} = this.state
+    this.setState({
+      input : '',
+      todos : todos.concat({
+        id : this.id++,
+        text : input,
+        checked : false
+      })
+    })
+  }
+  //삭제
+  handleRemove = id =>{
+    console.log("handleRemove" + id)
+  }
+  //토글
+  handleToggle = (id)=>{
+    console.log("handleToggle" + id)
   }
   //입력하고 엔터키
   handleKeyPress = e =>{
-
+    if(e.key === 'Enter'){
+      this.handleCreate()
+    }
   }
   render(){
     return (
@@ -44,7 +63,10 @@ class App extends Component {
             onCreate={this.handleCreate}/>
           }>
           
-          <TodoItemList/>
+          <TodoItemList
+          todos = {this.state.todos}
+          onRemove = {this.handleRemove}
+          onToggle = {this.handleToggle}/>
         </TodoListTemplate>
       </div>
     );
