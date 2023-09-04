@@ -21,7 +21,7 @@ class Notification extends Component{
         this.state={};
     }
     componentDidMount(){
-        console.log("Notification componentDidMount")
+        console.log(`${this.props.id} Notification componentDidMount`)
     }
     componentDidUpdate(){
         console.log("Notification componentDidUpdate")
