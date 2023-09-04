@@ -72,7 +72,7 @@ class App extends Component {
   render(){
     return (
       <div>
-       {/* <CommentList/> */}
+       <CommentList/>
         {/* <TodoListTemplate
           form = {
             <Form 
@@ -87,7 +87,7 @@ class App extends Component {
           onRemove = {this.handleRemove}
           onToggle = {this.handleToggle}/>
         </TodoListTemplate> */}
-        <NotificationList/>
+        {/* <NotificationList/> */}
       </div>
     );
   }
