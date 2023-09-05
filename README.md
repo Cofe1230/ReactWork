@@ -1,4 +1,5 @@
 # 리액트 수업
+
 ## 프로젝트 만들기
 * node 설치  
 https://nodejs.org/ko/download
@@ -34,7 +35,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 이름, 전화번호를 입력, 입력하면 상위 컴포넌트인 app.js에 데이터를 추가한다  
 * PhoneList.js
 상위 component에서 데이터, 함수를 받아와서 데이터 배열 개수만큼 PhoneInfo를 사용해 전체 데이터를 출력한다
-* PhoneInfo.js
-한 사람에 대한 자세한 내용을 출력, 삭제하는 component
+* PhoneInfo.js  
+한 사람에 대한 자세한 내용을 출력, 삭제하는 component  
  
   
