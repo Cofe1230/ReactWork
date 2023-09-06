@@ -1,15 +1,15 @@
 # 리액트 수업
 
 ## 프로젝트 만들기
-* node 설치  
+* **node 설치**  
 https://nodejs.org/ko/download
-* 생성  
+* **생성**  
 터미널 -> npx create-react-app [프로젝트 이름]
-* 오류
+* **오류**
 npm 못찾을때  
 npm uninstall -g create-react-app  
 npm install create-react-app  
-* 프로젝트 시작  
+* **프로젝트 시작**  
 npm start  
 ## first-app
 * **Counter.js**  
@@ -46,8 +46,30 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 **NotificationList**  
 ![app03_3](https://github.com/Cofe1230/ReactWork/assets/139449938/b6415515-1378-4695-9def-6e19da5bfdf9)  
 #### 코드
-* **app.js**  
-
+* **app.js(Class)**  
+  CommentList, TodoList, Notification 세가지 페이지 표현
+  - **CommentList.js(function)**  
+    표현할 list 함수 내에 존재, list 개수만큼 map을 사용하여 comment를 실행하고 필요한 data를 넘긴다
+    - **Comment.js(function)**  
+    comments 하나 하나 표현하는 함수 내부에 style이 있다 
+  - **TodoListTemplate.js(function)**  
+    사용하는 data, 함수가 app.js에 있어 상위에서 끌어와서 사용  
+    ```
+    <TodoListTemplate form=Form...>
+        <TodoItemList...>
+    </TodoListTemplate>
+    ```
+    Form은 {form}으로 TodoItemList는 {children}으로 사용  
+    - **Form.js(function)**  
+    텍스트를 입력하고 추가하면 app.js에 있는 list에 추가
+    - **TodoItemList.js(class)**  
+    List 개수만큼 TodoItem
+        - **TodoItem.js(class)**  
+        TodoItem 출력 형식 외부css사용
+  - **NotificationList.js(class)**  
+    생명주기, 내부에 있는 List를 componentDidMount 내부에서 setInterval을 사용하여 1초에 하나씩 배열에 넣고 List는 class에서 바로 출력  
+    - **Notification.js(class)**  
+    List 출력하는 Item 형식, 내부CSS, 생명주기  
 
 
   
