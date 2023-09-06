@@ -24,7 +24,7 @@ Function 작성, map을 사용하여 배열 전체 출력
 Class 작성, app.js(상위)에서 title에 내용을 넣고 movie.js에서 출력 (props)  
 * **MyDevice.js**  
 MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저장된 데이터를 MyDevice(하위)에서 사용  
-## app02-phone
+## [app02-phone](app02-phone#app02-phone)
 <details>
 <summary>실행화면</summary>
 
@@ -42,7 +42,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 상위 component에서 데이터, 함수를 받아와서 데이터 배열 개수만큼 PhoneInfo를 사용해 전체 데이터를 출력한다
 * **PhoneInfo.js**  
 한 사람에 대한 자세한 내용을 출력, 삭제하는 component  
-## app03_comment
+## [app03_comment](app03_commet#app03_comment)
 <details>
 <summary>실행화면</summary>
 
@@ -80,7 +80,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
     생명주기, 내부에 있는 List를 componentDidMount 내부에서 setInterval을 사용하여 1초에 하나씩 배열에 넣고 List는 class에서 바로 출력  
     - **Notification.js(class)**  
     List 출력하는 Item 형식, 내부CSS, 생명주기  
-## app04_hook
+## [app04_hook](app04_hook#app04_hook)
 <details>
 <summary>실행화면</summary>
 
