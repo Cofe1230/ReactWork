@@ -23,6 +23,36 @@
     입력하는 순간 입력한대로 {name}, {nickname}, {phone}에 출력  
     function이기 때문에 useState를 사용한다  
     여러개의 변수를 동시에 한 함수에서 처리  
+        
+        ```
+        import React, {useState} from "react";
+
+        ```  
+        초기화
+        ```
+        const [inputs,setInputs] = useState({
+        name : '',
+        nickname : '',
+        phone : ''
+        })
+        ```
+        ```
+        const onChange = (e)=>{
+            setInputs({
+                ...inputs,
+                [e.target.name] : e.target.value
+            })
+        }
+        const onReset = ()=>{
+            setInputs({
+                name : '',
+                nickname : '',
+                phone : ''
+            })
+        }
+        const {name,nickname,phone} = inputs
+        ```
+        
     * **InputTest(function)**  
     기능은 위와 동일하지만 {text}하나만 처리 좀더 간단하게 처리 가능하다
     * **InputTestClass(Class)**
@@ -41,6 +71,12 @@
         ```
         <button onClick={()=>changeColor('red')}>빨간색</button>
         <button name="pink" onClick={onClickChange}>분홍색</button>
+        ```
+        ```
+        <input name='name' placeholder="이름" onChange={onChange} value={name}/>
+        <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname}/>
+        <input name='phone' placeholder="전화번호" onChange={onChange} value={phone}/>
+        <button onClick={onReset}>초기화</button>
         ```
     * **Counter(function)**  
     버튼 클릭 이벤트 처리 연습  
