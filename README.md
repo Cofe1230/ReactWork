@@ -39,7 +39,15 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 한 사람에 대한 자세한 내용을 출력, 삭제하는 component  
 ## app03_comment
 #### 실행화면
+**CommentList**
 ![app03_1](https://github.com/Cofe1230/ReactWork/assets/139449938/53f8a506-e5d8-48c1-a50e-8540bbc86e87)
+**TodoList**
+![app03_2](https://github.com/Cofe1230/ReactWork/assets/139449938/f3cfa3fa-3852-458d-a76d-dc51fb80373c)
+**NotificationList**
+![app03_3](https://github.com/Cofe1230/ReactWork/assets/139449938/b6415515-1378-4695-9def-6e19da5bfdf9)
+#### 코드
+* **app.js**
+
 
 
   
