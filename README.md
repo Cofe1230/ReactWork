@@ -42,7 +42,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 상위 component에서 데이터, 함수를 받아와서 데이터 배열 개수만큼 PhoneInfo를 사용해 전체 데이터를 출력한다
 * **PhoneInfo.js**  
 한 사람에 대한 자세한 내용을 출력, 삭제하는 component  
-## [app03_comment](app03_commet#app03_comment)
+## [app03_comment](app03_comment#app03_comment)
 <details>
 <summary>실행화면</summary>
 
