@@ -112,37 +112,37 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
     * **Say(function)**  
     버튼 클릭마다 글자나 글자색이 변하는 함수
     버튼 클릭 함수 처리 연습  
-    ```
-    const changeColor = (color)=>{
-        setColor(color)
-    }
-    const onClickChange = (e)=>{
-        setColor(e.target.name)
-    }
-    ```
-    ```
-    <button onClick={()=>changeColor('red')}>빨간색</button>
-    <button name="pink" onClick={onClickChange}>분홍색</button>
-    ```
+        ```
+        const changeColor = (color)=>{
+            setColor(color)
+        }
+        const onClickChange = (e)=>{
+            setColor(e.target.name)
+        }
+        ```
+        ```
+        <button onClick={()=>changeColor('red')}>빨간색</button>
+        <button name="pink" onClick={onClickChange}>분홍색</button>
+        ```
     * **Counter(function)**  
     버튼 클릭 이벤트 처리 연습  
-    ```
-    const onIncrease = ()=>{
-        setNumber(number+1)
-    }
-    const onDecrease = ()=>{
-        setNumber(number-1)
-    }
-    const change =(changeNum)=>{
-        setNumber(number+changeNum)
-    }
-    ```
-    ```
-    <button onClick={onIncrease}>+1</button>
-            <button onClick={onDecrease}>-1</button><br/>
-            <button onClick={()=>change(1)}>1증가</button>
-            <button onClick={()=>change(-1)}>1감소</button>
-    ```
+        ```
+        const onIncrease = ()=>{
+            setNumber(number+1)
+        }
+        const onDecrease = ()=>{
+            setNumber(number-1)
+        }
+        const change =(changeNum)=>{
+            setNumber(number+changeNum)
+        }
+        ```
+        ```
+        <button onClick={onIncrease}>+1</button>
+                <button onClick={onDecrease}>-1</button><br/>
+                <button onClick={()=>change(1)}>1증가</button>
+                <button onClick={()=>change(-1)}>1감소</button>
+        ```
     * **Parent(function)**  
     내부에 comments foodILike List가 있어 List를 출력  
         * **Child.js(function)**  
