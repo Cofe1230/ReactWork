@@ -25,8 +25,13 @@ Class 작성, app.js(상위)에서 title에 내용을 넣고 movie.js에서 출�
 * **MyDevice.js**  
 MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저장된 데이터를 MyDevice(하위)에서 사용  
 ## app02-phone
-#### 실행화면
+<details>
+<summary>실행화면</summary>
+
+## 실행화면
 ![react01](https://github.com/Cofe1230/ReactWork/assets/139449938/dcd6e626-2363-437f-913e-63d0f34e0868)
+</details>
+
 #### 코드
 상위(app.js)에 있는 데이터, 함수를 하위 component에서 사용하여 데이터 출력 및 수정
 * **App.js**  
@@ -38,13 +43,18 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 * **PhoneInfo.js**  
 한 사람에 대한 자세한 내용을 출력, 삭제하는 component  
 ## app03_comment
-#### 실행화면
-**CommentList**  
+<details>
+<summary>실행화면</summary>
+
+## 실행화면
+### CommentList  
 ![app03_1](https://github.com/Cofe1230/ReactWork/assets/139449938/53f8a506-e5d8-48c1-a50e-8540bbc86e87)  
-**TodoList**  
+### TodoList  
 ![app03_2](https://github.com/Cofe1230/ReactWork/assets/139449938/f3cfa3fa-3852-458d-a76d-dc51fb80373c)  
-**NotificationList**  
+### NotificationList  
 ![app03_3](https://github.com/Cofe1230/ReactWork/assets/139449938/b6415515-1378-4695-9def-6e19da5bfdf9)  
+</details>
+
 #### 코드
 * **app.js(Class)**  
   CommentList, TodoList, Notification 세가지 페이지 표현
