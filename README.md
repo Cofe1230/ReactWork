@@ -37,5 +37,9 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 상위 component에서 데이터, 함수를 받아와서 데이터 배열 개수만큼 PhoneInfo를 사용해 전체 데이터를 출력한다
 * PhoneInfo.js  
 한 사람에 대한 자세한 내용을 출력, 삭제하는 component  
- 
+## app03_comment
+#### 실행화면
+![app03_1](https://github.com/Cofe1230/ReactWork/assets/139449938/53f8a506-e5d8-48c1-a50e-8540bbc86e87)
+
+
   
