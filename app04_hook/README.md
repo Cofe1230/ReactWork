@@ -52,7 +52,12 @@
         }
         const {name,nickname,phone} = inputs
         ```
-        
+        ```
+        <input name='name' placeholder="이름" onChange={onChange} value={name}/>
+        <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname}/>
+        <input name='phone' placeholder="전화번호" onChange={onChange} value={phone}/>
+        <button onClick={onReset}>초기화</button>
+        ```        
     * **InputTest(function)**  
     기능은 위와 동일하지만 {text}하나만 처리 좀더 간단하게 처리 가능하다
     * **InputTestClass(Class)**
@@ -71,12 +76,6 @@
         ```
         <button onClick={()=>changeColor('red')}>빨간색</button>
         <button name="pink" onClick={onClickChange}>분홍색</button>
-        ```
-        ```
-        <input name='name' placeholder="이름" onChange={onChange} value={name}/>
-        <input name="nickname" placeholder="닉네임" onChange={onChange} value={nickname}/>
-        <input name='phone' placeholder="전화번호" onChange={onChange} value={phone}/>
-        <button onClick={onReset}>초기화</button>
         ```
     * **Counter(function)**  
     버튼 클릭 이벤트 처리 연습  
