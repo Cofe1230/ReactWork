@@ -5,7 +5,7 @@
 https://nodejs.org/ko/download
 * **생성**  
 터미널 -> npx create-react-app [프로젝트 이름]
-* **오류**
+* **오류**  
 npm 못찾을때  
 npm uninstall -g create-react-app  
 npm install create-react-app  
@@ -70,6 +70,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
     생명주기, 내부에 있는 List를 componentDidMount 내부에서 setInterval을 사용하여 1초에 하나씩 배열에 넣고 List는 class에서 바로 출력  
     - **Notification.js(class)**  
     List 출력하는 Item 형식, 내부CSS, 생명주기  
+## app04_hook
 
 
   
