@@ -29,7 +29,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 <summary>실행화면</summary>
 
 ## 실행화면
-![react01](https://github.com/Cofe1230/ReactWork/assets/139449938/dcd6e626-2363-437f-913e-63d0f34e0868)
+![](/assets/images/230907092519.png)
 </details>
 
 ### 코드
@@ -48,11 +48,11 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 
 ## 실행화면
 ### CommentList  
-![app03_1](https://github.com/Cofe1230/ReactWork/assets/139449938/53f8a506-e5d8-48c1-a50e-8540bbc86e87)  
+![](/assets/images/230907092849.png)  
 ### TodoList  
-![app03_2](https://github.com/Cofe1230/ReactWork/assets/139449938/f3cfa3fa-3852-458d-a76d-dc51fb80373c)  
+![](/assets/images/230907092859.png)  
 ### NotificationList  
-![app03_3](https://github.com/Cofe1230/ReactWork/assets/139449938/b6415515-1378-4695-9def-6e19da5bfdf9)  
+![](/assets/images/230907092911.png) 
 </details>
 
 ### 코드
@@ -86,15 +86,15 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
 
 ## 실행화면
 ### InputSample
-![app04_1](https://github.com/Cofe1230/PyhonPractice/assets/139449938/de5498d5-15ed-48bb-81ed-a9c34181150f)
+![](/assets/images/230907092936.png)
 ### InputTest, InputTestClass
-![app04_2](https://github.com/Cofe1230/PyhonPractice/assets/139449938/60d64bdb-c232-4989-9962-36db49d856e2)
+![](/assets/images/230907092944.png)
 ### Say
-![app04_3](https://github.com/Cofe1230/PyhonPractice/assets/139449938/cfb2e9a0-d917-450c-ad44-79528153df24)
+![](/assets/images/230907092952.png)
 ### Counter
-![app04_4](https://github.com/Cofe1230/PyhonPractice/assets/139449938/3327e850-2a7f-4d56-90ac-9e4b4360ec3e)
+![](/assets/images/230907093009.png)    
 ### Parent
-![app04_5](https://github.com/Cofe1230/PyhonPractice/assets/139449938/25ed746a-1cd2-4878-b1ea-ec0b5547dac5)
+![](/assets/images/230907093018.png)
 
 
 </details>
