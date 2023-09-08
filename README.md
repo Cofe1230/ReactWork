@@ -4,13 +4,19 @@
 * **node 설치**  
 https://nodejs.org/ko/download
 * **생성**  
-터미널 -> npx create-react-app [프로젝트 이름]
+```
+npx create-react-app [프로젝트 이름]
+```
 * **오류**  
-npm 못찾을때  
+npm 못찾을때 
+```
 npm uninstall -g create-react-app  
 npm install create-react-app  
+``` 
 * **프로젝트 시작**  
-npm start  
+```
+npm start
+```
 ## [first-app](first-app#first-app)
 * **Counter.js**  
 Class 작성, class 안에 숫자 연산 합수 작성후 constructor에서 bind로 연결
@@ -64,7 +70,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
     comments 하나 하나 표현하는 함수 내부에 style이 있다 
   - **TodoListTemplate.js(function)**  
     사용하는 data, 함수가 app.js에 있어 상위에서 끌어와서 사용  
-    ```
+    ```javascript
     <TodoListTemplate form=Form...>
         <TodoItemList...>
     </TodoListTemplate>
@@ -112,7 +118,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
     * **Say(function)**  
     버튼 클릭마다 글자나 글자색이 변하는 함수
     버튼 클릭 함수 처리 연습  
-        ```
+        ```javascript
         const changeColor = (color)=>{
             setColor(color)
         }
@@ -120,13 +126,13 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
             setColor(e.target.name)
         }
         ```
-        ```
+        ```javascript
         <button onClick={()=>changeColor('red')}>빨간색</button>
         <button name="pink" onClick={onClickChange}>분홍색</button>
         ```
     * **Counter(function)**  
     버튼 클릭 이벤트 처리 연습  
-        ```
+        ```javascript
         const onIncrease = ()=>{
             setNumber(number+1)
         }
@@ -137,7 +143,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
             setNumber(number+changeNum)
         }
         ```
-        ```
+        ```javascript
         <button onClick={onIncrease}>+1</button>
                 <button onClick={onDecrease}>-1</button><br/>
                 <button onClick={()=>change(1)}>1증가</button>
@@ -148,7 +154,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
         * **Child.js(function)**  
         상위(Parent)에서 comment받아와 출력  
         * **Food.js(function)**  
-            ```
+            ```javascript
                 foodILike.map((food)=>{
                     return(
                         <Food key={food.id} food={food}/>
@@ -158,7 +164,7 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
             ```
             로받아왔을때 처리  
         * **Food1.js(function)**
-            ```
+            ```javascript
             foodILike.map((food)=>{
                     return(
                         <Food1 key={food.id}
@@ -169,5 +175,57 @@ MyDevice, MyDevice2 함수로 작성 MyDevice1 Class작성 app.js(상위)에 저
                     )
             })
             ```
-            로 받아왔을때 처리
-  
+            로 받아왔을때 처리  
+
+## [app05_movie](app05_movie#app05_movie)
+## 라이브러리 설치
+```
+npm install axios react-router-dom bootstrap react-bootstrap
+```
+package.json 에서 라이브러리 확인 가능
+## 실행화면
+<details>
+<summary>접기</summary>
+
+### InputSample
+![](/assets/images/230907092936.png)
+
+</details>
+
+## 내용
+https://yts.mx/api/v2/list_movies.json?sort_by=rating  
+에서 movies에 필요한 정보만 출력  
+
+## 코드
+Home.js  
+axios 사용
+```jsx
+import axios from 'axios'
+
+getMovies = async()=>{
+        const{
+            data  :{
+                data : {movies}
+            }
+            
+        } = await axios.get(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
+        console.log({movies})
+        this.setState({movies,isLoading:false})
+    } 
+```
+
+```jsx
+import {BrowserRouter, Route} from "react-router-dom";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path={"/"} element={<Home/>}></Route>
+        <Route path={"/about"} element={<About/>}></Route>
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
+```
