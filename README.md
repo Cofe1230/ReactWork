@@ -197,7 +197,9 @@ https://yts.mx/api/v2/list_movies.json?sort_by=rating
 에서 movies에 필요한 정보만 출력  
 
 ## 코드
-Home.js  
+ 
+### json 읽어서 배열에 저장 하는 방법  
+#### Home.js  
 axios 사용
 ```jsx
 import axios from 'axios'
@@ -213,19 +215,61 @@ getMovies = async()=>{
         this.setState({movies,isLoading:false})
     } 
 ```
+외부 라이브러리 없이 jsx만 사용
+```jsx
+getMovies = ()=>{
+        fetch(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
+        .then((res)=>res.json())
+        .catch(err=>console.log(err))
+        .then((res)=>{
+            console.log(res.data.movies)
+            this.setState({movies:res.data.movies,isLoading:false})
+        })
+    }
+```
+함수 실행
+```jsx
+componentDidMount(){
+        this.getMovies();
+    }
+```
+### 메뉴바 제작  
+### 리엑트에서 링크 연결하는 방법  
+#### Navigation.js  
+* react-router-dom을 사용하여 Link 연결  
+* to를 사용하여 위치 지정  
+* Home을 누르면 /로 이동한다.
+```jsx
+import { Link } from "react-router-dom";
 
+function Navigation(){
+    return(
+        <div className="nav">
+            <Link to="/">Home</Link>
+            <Link to="/about">app06__About</Link>
+            <Link to="/poster">Poster</Link>
+        </div>
+    )
+}
+```
+
+#### App.js  
+* Route에 들어간 path경로로 element가 실행된다  
+* 아래의 코드에서는 /로 들어갈시 \<home/> 이 실행된다
 ```jsx
 import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+    <Navigation/>
+    <Routes>
         <Route path={"/"} element={<Home/>}></Route>
         <Route path={"/about"} element={<About/>}></Route>
-
-      </Routes>
+        <Route path={"/poster"} element={<Poster/>}></Route>
+    </Routes>
     </BrowserRouter>
   );
 }
 ```
+## [app06_movie](app05_movie#app06_movie)

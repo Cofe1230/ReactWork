@@ -8,16 +8,28 @@ class Home extends Component{
         isLoading : true,
         movies : []
     }
-    getMovies = async()=>{
-        const{
-            data  :{
-                data : {movies}
-            }
+    //axios 사용
+    // getMovies = async()=>{
+    //     const{
+    //         data  :{
+    //             data : {movies}
+    //         }
             
-        } = await axios.get(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
-        console.log({movies})
-        this.setState({movies,isLoading:false})
-    } 
+    //     } = await axios.get(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
+    //     console.log({movies})
+    //     this.setState({movies,isLoading:false})
+    // }
+    
+    //axios 사용안할때 JS로 사용하여 같은 기능
+    getMovies = ()=>{
+        fetch(`https://yts.mx/api/v2/list_movies.json?sort_by=rating`)
+        .then((res)=>res.json())
+        .catch(err=>console.log(err))
+        .then((res)=>{
+            console.log(res.data.movies)
+            this.setState({movies:res.data.movies,isLoading:false})
+        })
+    }
     componentDidMount(){
         this.getMovies();
     }
