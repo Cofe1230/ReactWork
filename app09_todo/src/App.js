@@ -43,9 +43,9 @@ function App() {
   return (
     <div>
       <Stack gap={3}>
-      <Container><h1>To Do</h1></Container>
-      <TodoForm insertTodo = {insertTodo}/>
-      <TodoList todoList = {todoContentList} deleteTodo = {deleteTodo}/>
+        <Container><h1>To Do</h1></Container>
+        <TodoForm insertTodo = {insertTodo}/>
+        <TodoList todoList = {todoContentList} deleteTodo = {deleteTodo}/>
       </Stack>
     </div>
   );

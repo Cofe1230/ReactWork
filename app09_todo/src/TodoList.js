@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem";
 
 const TodoList = ({todoList , deleteTodo})=>{
     return(
-        <Container>
+        <Container >
             <Row>
                 {
                     todoList.map((item,index)=>{

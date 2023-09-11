@@ -283,5 +283,8 @@ spring mybaits
 spring server mapper options - 저장할때 저장 객체를 리턴시키는 방법  
 app09  
 부트스트랩 적용  
-
+book-blog
+useNavigate, useParams  
+리액트 폴더 구조  
+https://velog.io/@sisofiy626/React-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0  
 
