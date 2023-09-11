@@ -26,10 +26,8 @@ public class BoardController {
 	}
 	
 	@PostMapping("/api/insert")
-	public void insert(@RequestBody Board board) {
-		System.out.println(board.getTitle());
-		System.out.println(board.getContent());
-		boardService.insert(board);
+	public Board insert(@RequestBody Board board) {
+		return boardService.insert(board);
 	}
 	
 	@GetMapping("api/list")

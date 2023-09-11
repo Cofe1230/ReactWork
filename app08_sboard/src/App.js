@@ -23,6 +23,21 @@ function App() {
       setListContent(listContent.filter(board=>board.num!=num))
     })
   }
+  //추가
+  const insertBoard = (data)=>{ //data는 추가된 내용
+    axios.post("api/insert/",{
+      title:data.title,
+      content:data.content
+    }).then(()=>{
+      alert('등록완료')
+      setListContent(listContent.concat({
+        num: 1,
+        title:data.title,
+        content:data.content,
+        ...listContent
+      }))
+    })
+  }
   useEffect(()=>{
     listBoard()
   },[])
@@ -30,7 +45,8 @@ function App() {
     <div style={{paddingLeft:'20px'}}>
       <h1>app08_Simple Board</h1>
       <hr/>
-      <BoardForm/>
+      <BoardForm listBoard={listBoard}
+                  insertBoard = {insertBoard}/>
       <hr/>
       <BoardList lists = {listContent} 
                 deleteBoard = {deleteBoard}/>

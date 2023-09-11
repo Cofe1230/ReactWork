@@ -273,3 +273,5 @@ function App() {
 }
 ```
 ## [app06_movie](app05_movie#app06_movie)
+05를 hook으로  
+d

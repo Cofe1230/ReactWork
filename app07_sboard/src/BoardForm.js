@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-const BoardForm = ({listBoard})=>{
+const BoardForm = ({listBoard, insertBoard})=>{
     const [formcontent,SetFormContent]=useState({
         title : '',
         content : '',
@@ -33,6 +33,8 @@ const BoardForm = ({listBoard})=>{
             <textarea name='content' rows='10' cols='40' value={formcontent.content}
             onChange={getValue}/><br/>
             <button onClick={submitBoard}>입력</button>
+            <button onClick={()=>insertBoard(formcontent)}>입력2</button>
+            
         </div>
     )
 }

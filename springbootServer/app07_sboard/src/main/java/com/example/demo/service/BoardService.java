@@ -15,8 +15,8 @@ public class BoardService {
 	private final BoardRepository boardRepository;
 	
 	//추가
-	public void insert(Board board) {
-		boardRepository.save(board);
+	public Board insert(Board board) {
+		return boardRepository.save(board);
 	}
 	public List<Board> findAll(){
 		return boardRepository.findAll();
