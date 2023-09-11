@@ -37,7 +37,7 @@ public class BoardController {
 		return boardService.findAll();
 	}
 	@DeleteMapping("api/delete/{num}")
-	public void delete(@PathVariable int num) {
+	public void delete(@PathVariable long num) {
 		boardService.delete(num);
 	}
 }
