@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
 import com.example.app08_sboard_my.dto.Board;
@@ -13,6 +14,7 @@ import com.example.app08_sboard_my.dto.Board;
 public interface BoardMapper {
 	
 	@Insert("insert into board(title,content) values(#{title},#{content})")
+	@Options(useGeneratedKeys = true, keyProperty = "num")
 	public void insert(Board board);
 	
 	@Select("select * from board")

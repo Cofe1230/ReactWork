@@ -21,8 +21,9 @@ public class BoardController {
 	private final BoardService boardService;
 	
 	@PostMapping("/api/insert")
-	public void insert(@RequestBody Board board) {
+	public Board insert(@RequestBody Board board) {
 		boardService.insert(board);
+		return board;
 	}
 	@GetMapping("api/list")
 	public List<Board> findAll(){

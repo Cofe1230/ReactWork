@@ -274,4 +274,11 @@ function App() {
 ```
 ## [app06_movie](app05_movie#app06_movie)
 05를 hook으로  
-d
+app07  
+spring server 연결  
+spring data jpa  
+app08  
+app07 연습  
+spring mybaits  
+spring server mapper options - 저장할때 저장 객체를 리턴시키는 방법  
+

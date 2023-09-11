@@ -28,10 +28,11 @@ function App() {
     axios.post("api/insert/",{
       title:data.title,
       content:data.content
-    }).then(()=>{
+    }).then((resp)=>{
       alert('등록완료')
+      console.log(resp);
       setListContent(listContent.concat({
-        num: 1,
+        num: resp.data.num,
         title:data.title,
         content:data.content,
         ...listContent
