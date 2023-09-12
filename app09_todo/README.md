@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HTML 코드 정리
+* [\<head>](#\<head>)
 
-## Available Scripts
 
-In the project directory, you can run:
+## HTML 웹문서 기본 구조
 
-### `npm start`
+|태그|설명|
+|:---:|:---:|
+|\<!DOCTYPE html>|웹문서 유형이 html임을 알림|
+|\<html>|html의 최상위 컨테이너|
+|\<head>|문서의 전역특성을 넣는 영역|
+|\<bod>|모든 콘텐츠를 나타내는 영역|
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxmdrVG" data-user="lvhtbrvr-the-flexboxer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/lvhtbrvr-the-flexboxer/pen/xxmdrVG">
+  Untitled</a> by 김명준 (<a href="https://codepen.io/lvhtbrvr-the-flexboxer">@lvhtbrvr-the-flexboxer</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### \<head>
+* \<head>에 포함되는 요소  
 
-### `npm test`
+|태그|설명|
+|:---:|:---:|
+|\<title>|문서의 제목을 정의할때 사용|
+|[\<style>](#\<style>)| HTML 문서의 스타일 정보를 정의할 때 사용|
+|[\<base>](#\<base>)|모든 상대 주소(relative URL)에 대한 기본 URL(base URL)과 target 속성값을 정의|
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### \<style>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxmdrVG" data-user="lvhtbrvr-the-flexboxer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/lvhtbrvr-the-flexboxer/pen/xxmdrVG">
+  Untitled</a> by 김명준 (<a href="https://codepen.io/lvhtbrvr-the-flexboxer">@lvhtbrvr-the-flexboxer</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### \<base>
+|속성명|속성값|
+|----|---|
+|href|URL|
+|target|_blank, _parent, _self, _top, 프레임이름|
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxmdrVG" data-user="lvhtbrvr-the-flexboxer" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/lvhtbrvr-the-flexboxer/pen/xxmdrVG">
+  Untitled</a> by 김명준 (<a href="https://codepen.io/lvhtbrvr-the-flexboxer">@lvhtbrvr-the-flexboxer</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+####
