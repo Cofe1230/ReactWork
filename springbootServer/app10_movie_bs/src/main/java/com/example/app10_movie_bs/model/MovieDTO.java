@@ -11,6 +11,7 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 public class MovieDTO {
+	private long movieIdx;
 	private int year;
 	private String title;
 	private String summary;
@@ -19,6 +20,7 @@ public class MovieDTO {
 	
 	public Movie toEntity() {
 		return Movie.builder()
+				.movieIdx(movieIdx)
 				.year(year)
 				.title(title)
 				.summary(summary)

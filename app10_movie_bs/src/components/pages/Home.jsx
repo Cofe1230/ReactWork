@@ -25,6 +25,7 @@ const Home = () => {
         }
         
     }
+
     useEffect (()=>{
         getMovies()
     },[])
@@ -42,7 +43,8 @@ const Home = () => {
                         movies.map((movie,index)=>{
                             return(
                                 <Col md={4} key={index}>
-                                    <Movie key={movie.id}
+                                    <Movie key={movie.idx}
+                                        id={movie.movieIdx}
                                         year={movie.year}
                                         title={movie.title}
                                         summary={movie.summary}

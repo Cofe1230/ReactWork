@@ -15,8 +15,13 @@ public class MovieService {
 	private final MovieRepository movieRepository;
 	
 	public List<Movie> findAll(){
-		System.out.println("들어옴");
 		return movieRepository.findAll();
+	}
+	public Movie save(Movie movie) {
+		return movieRepository.save(movie);
+	}
+	public void deleteById(long id) {
+		movieRepository.deleteById(id);
 	}
 	
 }

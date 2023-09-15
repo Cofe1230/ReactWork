@@ -34,7 +34,8 @@ public class Movie {
 	private List<String> genres;
 	
 	@Builder
-	public Movie(int year, String title, String summary, String medium_cover_image, List<String> genres) {
+	public Movie(long movieIdx,int year, String title, String summary, String medium_cover_image, List<String> genres) {
+		this.movieIdx = movieIdx;
 		this.year = year;
 		this.title = title;
 		this.summary = summary;

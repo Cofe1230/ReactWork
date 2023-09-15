@@ -6,3 +6,10 @@
 .MovieDetail--Card{
   width: 50vh;
 }
+.Cardfooter{
+  display: flex;
+  justify-content: end;
+}
+.deleteItem{
+  color: rgb(181, 42, 42);
+}
