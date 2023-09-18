@@ -6,8 +6,10 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import com.example.book_blog.dto.CommentDTO;
 import com.example.book_blog.entity.Comment;
 import com.example.book_blog.entity.Post;
+import com.example.book_blog.repository.CommentRepository;
 import com.example.book_blog.repository.PostRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -32,4 +34,5 @@ public class PostService {
 		Post post = postRepository.findById(postNum).get();
 		post.addComment(comment);
 	}
+	
 }
