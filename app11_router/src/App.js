@@ -7,6 +7,7 @@ import Topics1 from './components/Topics1';
 import Topics from './components/Topics';
 import Topic from './components/Topic';
 import Login from './components/Login';
+import LoginResult from './components/LoginResult';
 
 function App() {
 
@@ -28,7 +29,9 @@ function App() {
         {/* 하위 주소를 입력받을 때 해당 Route안에 Route를 포함시킨다 */}
           <Route path=':id'element={<Topic contents = {contents}/>}></Route>
         </Route>
-        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/login' element={<Login/>}>
+          <Route path='result/:id/:pw' element={<LoginResult/>}></Route>
+        </Route>
       </Routes>
     </div>
     </BrowserRouter>

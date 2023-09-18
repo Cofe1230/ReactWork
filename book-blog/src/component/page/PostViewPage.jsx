@@ -5,6 +5,8 @@ import CommentList from "../list/CommentList";
 import TextInput from "../ui/TextInput";
 import Button from "../ui/Button";
 import data from "../../data.json";
+import axios from "axios";
+import { useEffect } from "react";
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -51,12 +53,26 @@ const CommentLabel = styled.p`
 function PostViewPage(props) {
     const navigate = useNavigate();
     const { postId } = useParams();
-
-    const post = data.find((item) => {
-        return item.id == postId;
-    });
-
+    const [post,setPost] = useState({
+        id : '',
+        title : '',
+        content : '',
+        comments : []
+    })
     const [comment, setComment] = useState("");
+
+    const getPost = async()=>{
+        const resp = await axios.get(`/post/${postId}`);
+        setPost(resp.data)
+    }
+    const insertComment = async()=>{
+        await axios.put(`/insertCmt`,{postid : postId,content : comment});
+        navigate("/");
+    }
+
+    useEffect(()=>{
+        getPost();
+    },[])
 
     return (
         <Wrapper>
@@ -85,7 +101,7 @@ function PostViewPage(props) {
                 <Button
                     title="댓글 작성하기"
                     onClick={() => {
-                        navigate("/");
+                        insertComment();
                     }}
                 />
             </Container>

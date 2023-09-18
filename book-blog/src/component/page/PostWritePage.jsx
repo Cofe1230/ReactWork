@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import TextInput from "../ui/TextInput";
 import Button from "../ui/Button";
+import axios from 'axios';
 
 const Wrapper = styled.div`
     padding: 16px;
@@ -23,12 +24,20 @@ const Container = styled.div`
         }
     }
 `;
-
 function PostWritePage(props) {
     const navigate = useNavigate();
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+
+    const InsertPost = async()=>{
+        try{
+            const response = await axios.put("/postInsert",{title:title,content:content})
+            navigate("/")
+        }catch(e){
+            console.log(e);
+        }
+    }
 
     return (
         <Wrapper>
@@ -52,7 +61,7 @@ function PostWritePage(props) {
                 <Button
                     title="글 작성하기"
                     onClick={() => {
-                        navigate("/");
+                        InsertPost();
                     }}
                 />
             </Container>
