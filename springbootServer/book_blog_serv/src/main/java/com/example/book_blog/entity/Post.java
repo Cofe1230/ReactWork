@@ -34,7 +34,7 @@ public class Post {
 	private String content;
 	@Builder.Default
 	@JsonManagedReference
-	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
 	private List<Comment> comments = new ArrayList<Comment>();
 	
 	public void addComment(Comment comment) {
