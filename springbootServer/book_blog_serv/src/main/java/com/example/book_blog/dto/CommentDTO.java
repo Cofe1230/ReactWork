@@ -17,9 +17,8 @@ public class CommentDTO {
 	private long id;
 	private String content;
 	private long postid;
-	private Post post;
 	
-	public Comment toEntity() {
+	public Comment toEntity(Post post) {
 		return Comment.builder().id(id)
 								.content(content)
 								.post(post)

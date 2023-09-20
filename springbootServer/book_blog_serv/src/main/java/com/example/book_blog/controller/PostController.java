@@ -54,9 +54,7 @@ public class PostController {
 	}
 	@PutMapping("/insertCmt")
 	public void insertCmt(@RequestBody CommentDTO commentDTO) {
-		long postId =commentDTO.getPostid();
-		commentDTO.setPost(postService.findById(postId));
-		postService.insertCmt(postId, commentDTO.toEntity());
+		postService.insertCmt(commentDTO);
 	}
 	
 }

@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -29,7 +30,6 @@ public class Comment {
 	private long id;
 	private String content;
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JsonBackReference
 	@JoinColumn(name = "post_id")
 	private Post post;
 	

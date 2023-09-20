@@ -30,8 +30,10 @@ public class PostService{
 		return postRepository.findById(num).get();
 	}
 	@Transactional
-	public void insertCmt(long postNum, Comment comment) {
-		Post post = postRepository.findById(postNum).get();
+	public void insertCmt(CommentDTO commentDTO) {
+		long post_id = commentDTO.getPostid();
+		Post post = postRepository.findById(post_id).get();
+		Comment comment = commentDTO.toEntity(post);
 		post.addComment(comment);
 	}
 	
