@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class PostService implements PostServiceImpl{
+public class PostService{
 	private final PostRepository postRepository;
 	
 	public Post save(Post post) {
