@@ -20,7 +20,7 @@ const PostList=({posts,onClickItem})=>{
         <Wrapper>
             {posts.map((post,index)=>{
                 return(
-                    <PostListItem key={post.div} post={post} onClick={()=>{onClickItem(post)}}/>
+                    <PostListItem key={index} post={post} onClick={()=>{onClickItem(post)}}/>
                 )
             })}
         </Wrapper>

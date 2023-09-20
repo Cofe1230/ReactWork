@@ -6,12 +6,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -31,8 +33,8 @@ public class Post {
 	private String title;
 	private String content;
 	@Builder.Default
-	@JsonIgnore
-	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
+	@JsonManagedReference
+	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	private List<Comment> comments = new ArrayList<Comment>();
 	
 	public void addComment(Comment comment) {

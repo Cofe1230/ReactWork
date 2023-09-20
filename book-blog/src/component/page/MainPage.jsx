@@ -30,16 +30,28 @@ const Container = styled.div`
 function MainPage(props) {
     const [data,setData] = useState([])
     const navigate = useNavigate();
-    const getData = async ()=>{
-        try{
-            const response = await axios.get("/postList");
-            console.log(response);
-            setData(response.data);
-        }catch(e){
-            console.log(e);
-        }
-    }
-    useEffect(()=>{getData()},[])
+    
+    useEffect(()=>{
+        const source = axios.CancelToken.source();
+        (async ()=>{
+            try{
+                console.log("리스트 받는거 들어옴 ----");
+                const response = await axios.get("/postList",{cancelToken:source.token});
+                console.log(response);
+                setData(response.data);
+                
+            }catch(error){
+                if(axios.isCancel(error)){
+                    console.error("axios error: ", error.message);
+                }else{
+                    console.error(error);
+                }
+            }
+        })();
+        return()=>{
+            source.cancel("Pervious request canceled");
+        };
+    },[])
     return (
         <Wrapper>
             <Container>

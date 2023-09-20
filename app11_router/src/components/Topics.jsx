@@ -18,9 +18,7 @@ const Topics = ({contents}) => {
         {list}
       </ul>
       {/* 하위 컴포넌트가 보여지는 부분 */}
-      <Outlet>
-
-      </Outlet>
+      <Outlet></Outlet>
     </div>
   );
 };
