@@ -35,7 +35,7 @@ public class Post {
 	private String title;
 	private String content;
 	@Builder.Default
-	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Comment> comments = new ArrayList<Comment>();
 	
 	public void addComment(Comment comment) {
