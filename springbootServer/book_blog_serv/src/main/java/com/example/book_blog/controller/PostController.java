@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.book_blog.dto.CommentDTO;
 import com.example.book_blog.dto.PostDTO;
+import com.example.book_blog.entity.Comment;
 import com.example.book_blog.entity.Post;
 import com.example.book_blog.service.PostService;
 
@@ -46,10 +47,17 @@ public class PostController {
 	@GetMapping("/post/{num}")
 	public PostDTO findById(@PathVariable long num) {
 		Post post = postService.findById(num);
+		List<CommentDTO> lists = new ArrayList<>();
+		for(Comment c : post.getComments()) {
+			lists.add(CommentDTO.builder().id(c.getId())
+										.content(c.getContent())
+										.postid(post.getId())
+										.build());
+		}
 		return PostDTO.builder().id(post.getId())
 								.title(post.getTitle())
 								.content(post.getContent())
-								.comments(post.getComments())
+								.comments(lists)
 								.build();
 	}
 	@PutMapping("/insertCmt")

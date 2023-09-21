@@ -27,7 +27,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Builder
-@JsonIgnoreProperties({"comments"})
 public class Post {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "post_id")

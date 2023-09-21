@@ -20,11 +20,11 @@ public class PostDTO {
 	private long id;
 	private String title;
 	private String content;
-	private List<Comment> comments;
+	private List<CommentDTO> comments;
 	
 	public Post CreatePost() {
 		return Post.builder().title(title)
-								.content(content)
-								.build();
-	}
+							.content(content)
+							.build();
+}
 }
