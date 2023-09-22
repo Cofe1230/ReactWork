@@ -2,17 +2,19 @@ import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import TodoItem from './TodoItem';
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos,onClickUpdate,onClickDelete}) => {
   return (
-    <Container>
+    <div>
       {
         todos.map((item)=>{
           return(
-            <TodoItem key={item.id} item={item}/>
+            <TodoItem key={item.id} item={item} 
+                                    onClickUpdate={()=>{onClickUpdate(item)}}
+                                    onClickDelete={()=>{onClickDelete(item)}}/>
           )
         })
       }
-    </Container>
+    </div>
   );
 };
 

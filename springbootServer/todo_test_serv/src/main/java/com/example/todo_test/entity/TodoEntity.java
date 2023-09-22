@@ -21,4 +21,10 @@ public class TodoEntity {
 	private long id;
 	private String title;
 	private String content;
+	
+	@Builder
+	public void updateEntity(String title, String content) {
+		this.title=title;
+		this.content=content;
+	}
 }
