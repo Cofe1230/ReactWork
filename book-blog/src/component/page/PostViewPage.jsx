@@ -66,7 +66,7 @@ function PostViewPage(props) {
         setPost(resp.data)
     }
     const insertComment = async()=>{
-        await axios.put(`/insertCmt`,{postid : postId,content : comment});
+        await axios.put(`/insertCmt/${postId}`,{content : comment});
         navigate("/");
     }
 

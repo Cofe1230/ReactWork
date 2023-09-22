@@ -60,9 +60,9 @@ public class PostController {
 								.comments(lists)
 								.build();
 	}
-	@PutMapping("/insertCmt")
-	public void insertCmt(@RequestBody CommentDTO commentDTO) {
-		postService.insertCmt(commentDTO);
+	@PutMapping("/insertCmt/{pid}")
+	public void insertCmt(@PathVariable long pid,@RequestBody CommentDTO commentDTO) {
+		postService.insertCmt(pid,commentDTO);
 	}
 	
 }
